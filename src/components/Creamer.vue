@@ -1,18 +1,23 @@
 <template>
-  <div class="froth">
-    <div v-for=" in 5" class="foam"></div>
+  <div class="froth" :style="{ backgroundColor: color }">
+    <div v-for="n in 5" :key="n" class="foam"></div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
-<style lang="scss" scoped>
+<script setup lang="ts">
+defineProps<{
+  color: string;
+  name: string;
+}>();
+</script>
+
+<style scoped>
 .froth {
   overflow: visible;
   transform: translateY(400%);
   position: relative;
   height: 20%;
   width: 100%;
-  background-color: #c6c6c6;
   animation: pour-tea 2s 2s forwards;
 }
 .foam {
