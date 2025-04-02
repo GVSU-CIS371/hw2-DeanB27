@@ -11,4 +11,5 @@ export default defineConfig({
       },
     },
   },
+  base: '/hw2-DeanB27/', // Replace with your repository name
 });
