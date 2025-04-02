@@ -11,5 +11,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/hw2-DeanB27/'
+  base: '/'
 });
